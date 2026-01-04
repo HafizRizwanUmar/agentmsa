@@ -57,7 +57,7 @@ const InputArea = ({ onSend, isLoading }) => {
                 {/* Footer Disclaimer */}
                 <div className="text-center mt-3">
                     <p className="text-xs text-text-muted/60">
-                        ChatGPT can make mistakes. Check important info.
+                        AgentMSA can make mistakes. Check important info.
                     </p>
                 </div>
             </div>

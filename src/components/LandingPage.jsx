@@ -106,9 +106,9 @@ const LandingPage = () => {
                 <div className="flex-1 flex flex-col justify-center items-center w-full relative z-20">
                     {/* Main Typography */}
                     <div className="mb-12 relative">
-                        <h1 className="text-6xl md:text-[8rem] lg:text-[10rem] font-medium tracking-tighter leading-[0.9] text-white flex flex-col items-center">
+                        <h1 className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[10rem] font-medium tracking-tighter leading-[0.9] text-white flex flex-col items-center">
                             <span className="hero-text-line block">Microservice</span>
-                            <span className="hero-text-line block font-serif italic font-light relative px-8 my-4 md:my-0 text-[#ccff00]">
+                            <span className="hero-text-line block font-serif italic font-light relative px-4 md:px-8 my-4 md:my-0 text-[#ccff00]">
                                 Architecture
                                 {/* Orbit SVG Decoration */}
                                 <svg className="absolute -top-6 -left-4 w-[120%] h-[150%] pointer-events-none text-white/90" viewBox="0 0 200 100" preserveAspectRatio="none">
@@ -127,7 +127,7 @@ const LandingPage = () => {
                     <div className="relative mb-8 pt-8">
                         <button
                             onClick={() => navigate('/chat')}
-                            className="hero-btn px-12 py-4 rounded-full border border-[#ccff00] text-white bg-black/40 backdrop-blur-sm shadow-[0_0_20px_rgba(204,255,0,0.3)] hover:shadow-[0_0_40px_rgba(204,255,0,0.6)] hover:scale-105 transition-all duration-300 group tracking-widest text-sm uppercase font-bold flex items-center gap-3"
+                            className="hero-btn px-8 md:px-12 py-4 rounded-full border border-[#ccff00] text-white bg-black/40 backdrop-blur-sm shadow-[0_0_20px_rgba(204,255,0,0.3)] hover:shadow-[0_0_40px_rgba(204,255,0,0.6)] hover:scale-105 transition-all duration-300 group tracking-widest text-sm uppercase font-bold flex items-center gap-3"
                         >
                             Get Started <ArrowRight size={16} />
                         </button>

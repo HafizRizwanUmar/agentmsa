@@ -7,7 +7,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="w-64 h-full bg-surface border-r border-primary/20 flex flex-col hidden md:flex font-primary bg-black">
+        <div className="w-64 h-full bg-surface border-r border-primary/20 flex flex-col font-primary bg-black">
             {/* Header Area */}
             <div className="p-3 flex justify-between items-center group">
                 <button className="flex items-center gap-2 px-2 py-2 hover:bg-surface-hover rounded-lg transition-colors w-full text-left">
