@@ -78,22 +78,35 @@ const Message = ({ message }) => {
                                                         <h4 className="font-semibold text-primary text-base leading-snug">
                                                             {source.title || 'Untitled Discussion'}
                                                         </h4>
-                                                        <span className="shrink-0 text-[11px] font-medium text-text-muted/70 bg-background px-2.5 py-1 rounded-full border border-white/5 uppercase tracking-wider">
-                                                            Score: {Math.round(source.score || 0)}
-                                                        </span>
+                                                        {source.accepted && (
+                                                            <span className="shrink-0 flex items-center gap-1 text-[10px] font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded-full border border-green-400/20 uppercase tracking-wider">
+                                                                <Check size={12} strokeWidth={3} /> Verified
+                                                            </span>
+                                                        )}
                                                     </div>
 
                                                     <p className="text-text-muted/90 text-sm leading-7 line-clamp-3 font-normal opacity-90">
                                                         {source.summary || source.answer || source.content}
                                                     </p>
 
-                                                    <div className="mt-4 flex items-center gap-3 text-xs text-text-muted/60">
-                                                        <div className="flex items-center gap-1.5">
-                                                            <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
-                                                            <span>Stack Overflow</span>
+                                                    <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-text-muted/70">
+                                                        <div className="flex items-center gap-1.5" title="Community Votes">
+                                                            <div className="px-1.5 py-0.5 bg-white/10 rounded text-text font-medium text-[10px]">
+                                                                ▲ {source.votes || 0}
+                                                            </div>
+                                                            <span>Votes</span>
                                                         </div>
-                                                        <span>•</span>
-                                                        <span>{source.date || 'Unknown Date'}</span>
+
+                                                        {source.reputation > 0 && (
+                                                            <div className="flex items-center gap-1.5" title="Author Reputation">
+                                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                                                                <span>{source.reputation.toLocaleString()} Rep</span>
+                                                            </div>
+                                                        )}
+
+                                                        <div className="flex items-center gap-1.5 ml-auto opacity-60">
+                                                            <span>{source.date || 'Unknown Date'}</span>
+                                                        </div>
                                                     </div>
                                                 </a>
                                             ))}
