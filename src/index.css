@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-background: #000000;
+  /* Main dark background matching Agent MSA */
+  --color-surface: #0a0a0a;
+  /* Sidebar/surface background */
+  --color-surface-hover: #1a1a1a;
+  /* Hover state */
+  --color-border: #333333;
+  /* Subtle borders */
+
+  --color-primary: #ccff00;
+  /* Neon Green accent */
+  --color-primary-hover: #b3e600;
+  /* Darker Neon Green on hover */
+  --color-primary-dim: #99c200;
+  /* Dimmed Neon Green */
+
+  --color-text: #ffffff;
+  /* Primary text - white */
+  --color-text-muted: #a1a1aa;
+  /* Muted/secondary text */
+
+  --font-family-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-serif: 'Playfair Display', serif;
+
+  --animate-fade-in: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-up: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-pulse-slow: pulseSlow 3s infinite;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulseSlow {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+
+/* Base styles with Poppins font */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-primary);
+  @apply antialiased min-h-screen selection:bg-[#ccff00] selection:text-black;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3f3f46;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #52525b;
+}
+
+/* Glass Utility */
+.glass {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10;
+}
+
+.glass-heavy {
+  @apply backdrop-blur-2xl bg-black/40 border border-white/5;
+}
